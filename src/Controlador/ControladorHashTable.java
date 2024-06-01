@@ -44,13 +44,13 @@ public class ControladorHashTable {
      * Solicita los datos iniciales (tamaño de la tabla hash y cantidad de claves) al usuario.
      */
     private void solicitarDatosIniciales() {
-        String tamañoInput = JOptionPane.showInputDialog(vista, "Ingrese el tamaño de la tabla hash:");
+        String tamañoInput = JOptionPane.showInputDialog(vista, "Ingrese la cantidad de claves a utilizar:");
         if (tamañoInput != null && !tamañoInput.trim().isEmpty()) {
             try {
                 tamañoTabla = Integer.parseInt(tamañoInput.trim());
                 if (tamañoTabla > 0) {
                     tablaHash = new TablaHash(tamañoTabla);
-                    String cantidadClavesInput = JOptionPane.showInputDialog(vista, "Ingrese la cantidad de claves:");
+                    String cantidadClavesInput = JOptionPane.showInputDialog(vista, "Ingrese el tamaño del cuadro:");
                     if (cantidadClavesInput != null && !cantidadClavesInput.trim().isEmpty()) {
                         try {
                             cantidadClaves = Integer.parseInt(cantidadClavesInput.trim());
